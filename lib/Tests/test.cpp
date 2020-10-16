@@ -1,25 +1,36 @@
 #include <gtest/gtest.h>
 #include <gmock/gmock.h>
-#include "ClassName.h"
+#include "Structures/ClassName.h"
+#include "Structures/LinkedList.h"
 
 using testing::Eq;
 
 namespace {
-    class ClassDeclaration : public testing::Test {
+    class UnitTesting : public testing::Test {
     public:
-        ClassName obj;
-        ClassDeclaration(){
-            obj;
+        LinkedList *prueba = new LinkedList();
+        void newList(int);
+        UnitTesting(){
+            LinkedList List;
         }
     };
+    void UnitTesting::newList(int num) {
+        prueba->append(num);
+    }
 }
-TEST_F(ClassDeclaration, nameOfTheTest1){
-    obj.setAge(22);
-    ASSERT_EQ(22, obj.getAge());
-    ASSERT_EQ("", "");
+
+TEST_F(UnitTesting, Test1_Exists){
+    newList(45);
+    ASSERT_EQ(true, prueba->exists(45));
 }
-TEST_F(ClassDeclaration, nameOfTheTest2){
-    obj.setAge(23);
-    ASSERT_THAT(23, testing::Eq(obj.getAge()));
-    ASSERT_EQ("", "");
+
+TEST_F(UnitTesting, Test2_Head){
+    newList(5);
+    ASSERT_EQ(5, prueba->getHead()->getData());
+}
+
+TEST_F(UnitTesting, Test3_Lenght){
+    newList(34);
+    newList(27);
+    ASSERT_THAT(2, testing::Eq(prueba->getLength()));
 }
