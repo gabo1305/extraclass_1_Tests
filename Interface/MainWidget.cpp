@@ -32,7 +32,7 @@ MainWidget::MainWidget(QWidget *parent) : QWidget(parent)
     label2->setFixedSize(150, 25);
 
     image = new QLabel();
-    QPixmap pix("/home/gabriel/Documents/Files/extraclass-1-CE2103-master/graph.png");
+    QPixmap pix("/home/anthony/Documents/RepositoriosDatos2/extraclass_1_Tests/graph.png");
     image->setPixmap(pix.scaled(450, 300, Qt::KeepAspectRatio));
 
     QHBoxLayout *imageLayout = new QHBoxLayout;
