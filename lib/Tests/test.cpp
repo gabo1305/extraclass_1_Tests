@@ -20,6 +20,7 @@ namespace {
 }
 
 TEST_F(UnitTesting, Test1_Exists){
+
     newList(45);
     ASSERT_EQ(true, prueba->exists(45));
 }
@@ -33,4 +34,14 @@ TEST_F(UnitTesting, Test3_Lenght){
     newList(34);
     newList(27);
     ASSERT_THAT(2, testing::Eq(prueba->getLength()));
+
 }
+TEST_F(UnitTesting,Test4_GetBy_Index){
+    newList(33);
+    newList(12);
+    newList(66);
+    newList(4);
+    ASSERT_EQ(66, prueba->getByIndex(2)->getData());
+}
+
+
