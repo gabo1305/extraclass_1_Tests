@@ -5,6 +5,9 @@ set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 set(CMAKE_PREFIX_PATH "/otp/cmake")
 
+set(CMAKE_CXX_FLAGS "-g -O0 -Wall -fprofile-arcs -ftest-coverage")
+set(CMAKE_CXX_OUTPUT_EXTENSION_REPLACE 1)
+
 find_package(Qt5 COMPONENTS Core Widgets Gui REQUIRED)
 
 set(CMAKE_AUTOMOC ON)
