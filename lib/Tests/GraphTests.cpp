@@ -65,16 +65,12 @@ TEST_F(UnitTesting2, Add0Weight) {
     newGraph();
     EXPECT_EQ(1, pGraph->addEdge(1,2,0));
 }
-TEST_F(UnitTesting2, AddEdgeWIthoutExistentVertex) {
-    newGraph();
-    EXPECT_EQ(1, pGraph->addEdge(22,2,5));
-}
 
 TEST_F(UnitTesting2, AddExistentsAndConnectedVertex) {
     newGraph();
     EXPECT_EQ(1, pGraph->addEdge(0,1,3));
 }
-TEST_F(UnitTesting2, GettShortestROute {
+TEST_F(UnitTesting2, AddEdgeWIthoutExistentVertex) {
     newGraph();
-    EXPECT_EQ(1, pGraph->addEdge(0,1,3));
+    EXPECT_EQ(1, pGraph->addEdge(22,2,5));
 }
